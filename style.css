@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+body { 
+    background-image: url(images/background.jpg);
+    background-attachment: fixed;
+    font-family: 'Titillium Web', sans-serif;  
+    background-color: gray;
+}
+
+header {
+    background-image: url(images/wallpaper.jpg);
+    background-size: cover;
+    height: 800px;
+}
+nav {
+    float: right;
+    padding: 20px;
+}
+
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+nav a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+nav a.menu-icon {
+    visibility: hidden;
+}
+
+#name {
+    color: white;
+    padding: 5px;
+    margin-top: 9%;
+    margin-left: 30%;
+    font-size: xx-large;
+    
+}
+
+#desc {
+    color: white;
+    padding: 5px;
+    margin-left: 25%;
+}
+#projects-div, #skills-div, #education-div, #contact-div {
+    background-color: rgba(255, 255, 255, 0.75);
+   
+}
+
+#projects, #skills, #education, #contact {
+    padding: 5px;
+    font-size: xx-large;
+    text-align: center;
+}
+
+#projects-item-container,
+#skills-item-container,
+#education-item-container,
+#contact-item-container {
+    padding: 50px;
+}
+
+.projects-item a,
+.contact-item a{
+    text-decoration: none;
+    color: rgb(250, 53, 53);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.projects-item {
+    display: inline-block;
+    width: 33%;
+    min-width: 200px;
+    text-align: center;
+    padding: 5px;
+}
+.contact-item {
+    display: inline-block;
+    width: 24%;
+    min-width: 100px;
+    text-align: center;
+    padding: 5px;
+}
+
+#skills-item-container {
+    
+    font-size: 20px;
+    
+}
+.skills-item-list{
+    display: inline-block;
+    
+    min-width: 300px;
+    margin-left: 20%;
+}
+#education-item-container {
+    font-size: 20px;
+    margin-left: 20%;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        float: none;
+        
+    }
+    
+    nav a {
+        display: none;
+        padding: 20px;
+        text-decoration: none;
+        color: white;
+    }
+    nav a:hover {
+        color: black;
+        background-color: white;
+        border-radius: 5px;
+        transition: 0.5s;
+    }
+    nav a.menu-icon {
+        
+        float: right; /*for visible icon*/
+        display: block;
+        visibility: visible;
+    
+    }
+    .projects-item {
+        display: inline-block;
+        width: 200px;
+        margin: auto;
+        /*removed min width*/
+        text-align: center;
+        padding: 5px;
+    }
+    
+    .contact-item {
+        display: inline-block;
+        width: 200px;
+        margin: auto;
+        text-align: center;
+        padding: 5px;
+    }
+}
+/* The "responsive" class is added to the 
+topnav with JavaScript when the user clicks 
+on the icon. This class makes the topnav 
+look good on small screens (display the 
+links vertically instead of horizontally) */
+@media screen and (max-width: 500px) {
+    nav.responsive {position: relative;}
+        nav.responsive a.menu-icon {
+            position: absolute;
+            right: 0px; /*for visible & responsive icon*/
+            top: 0;
+            visibility: visible;
+        }
+        nav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }    
